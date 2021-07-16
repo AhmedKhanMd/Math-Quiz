@@ -5,9 +5,11 @@ let gameOver = document.getElementsByClassName("game-over");
 let remainingTime = document.getElementsByClassName("time-remaining");
 let Correct = document.getElementsByClassName("correct");
 let Wrong = document.getElementsByClassName("wrong");
+let clickedAnswer = document.getElementsByClassName("options");
 let isPlaying = false;
 let timeRemaining;
 let operators = ['+', '-', '*', '/', '%'];
+let correctAnswers = []
 let score;
 let time;
 
@@ -30,12 +32,44 @@ startReset[0].addEventListener('click', function() {
 
 });
 
+for(let i = 0; i < 4; ++i)  {
+
+  clickedAnswer[i].addEventListener('click', function () {
+
+    if(isPlaying === true) {
+      
+      if(clickedAnswer[i].innerHTML == correctAnswers[correctAnswers.length - 1]) {
+        score += 1;
+        Score[0].innerHTML = "<p> Score : " + score + "</p>";
+        Wrong[0].style.display = "none";
+        Correct[0].style.display = "block";
+        setTimeout(function() {
+          Correct[0].style.display = "none";
+        }, 1000);
+        generateQuestionAndOptions();
+      }
+      else {
+        Correct[0].style.display = "none";
+        Wrong[0].style.display = "block";
+        setTimeout(function() {
+        Wrong[0].style.display = "none";
+        }, 1000);
+      }
+
+    }
+  
+  })
+  
+}
+
 function generateQuestionAndOptions()
 {
   let num1 = Math.floor(10 * Math.random()) + 1;
   let num2 = Math.floor(10 * Math.random()) + 1;
   let operator = operators[Math.floor(5 * Math.random())];
   let correctAnswer = calculateAnswer(num1, num2, operator);
+
+  correctAnswers.push(correctAnswer);
 
   document.getElementsByClassName("question")[0].innerHTML = num1 + "    " +  operator +  "    " + num2; 
 

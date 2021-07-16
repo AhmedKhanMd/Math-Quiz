@@ -104,6 +104,7 @@ html {
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
+  position: relative;
 }
 
 .options:hover, .start-reset:hover {
@@ -115,7 +116,7 @@ html {
   -o-box-shadow: 0 4px #6b54d3; 
 }
 
-.option:active, .start-reset:active {
+.options:active, .start-reset:active {
   box-shadow: 0 0 #6b54d3;
   -webkit-box-shadow: 0 0 #6b54d3;
   -moz-box-shadow: 0 0 #6b54d3;
