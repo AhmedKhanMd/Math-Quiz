@@ -1,87 +1,55 @@
 <!DOCTYPE html>
 
-<html lang = "en">
-
+<html lang="en">
   <head>
+    <meta charset="utf-8" />
 
-    <meta charset = "utf-8">
+    <meta
+      name="viewport"
+      content="initial-scale = 1.0, user-scalable = yes, width = device-width"
+    />
 
-    <meta name = "viewport" content = "initial-scale = 1.0, user-scalable = yes, width = device-width">
+    <title>Math Quiz</title>
 
-    <title> Math Quiz </title>
-    
-    <link rel = "stylesheet" href = "styles.css" type = "text/css">
-
+    <link rel="stylesheet" href="styles.css" type="text/css" />
   </head>
 
   <body>
-    
-    <div class = "container">
-
-      <div class = "score">
-        <p> Score : <span class = "value"> 0 </span> </p>
+    <div class="container">
+      <div class="score">
+        <p>Score : <span class="value"> 0 </span></p>
       </div>
 
-      <div class = "correct">
-        Correct
+      <div class="correct">Correct</div>
+
+      <div class="wrong">Try Again!</div>
+
+      <div class="question"></div>
+
+      <div class="instruction">Click on the correct answer!</div>
+
+      <div class="choices">
+        <div class="option-1 options"></div>
+
+        <div class="option-2 options"></div>
+
+        <div class="option-3 options"></div>
+
+        <div class="option-4 options"></div>
       </div>
 
-      <div class = "wrong">
-        Try Again!
-      </div>
+      <div class="start-reset">Start Game</div>
 
-      <div class = "question">
-
-           
-
-      </div>
-
-      <div class = "instruction">
-        Click on the correct answer!
-      </div>
-
-      <div class = "choices">
-        
-        <div class = "option-1 options">
-            
-        </div>
-  
-        <div class = "option-2 options">
-            
-        </div>
-  
-        <div class = "option-3 options">
-            
-        </div>
-  
-        <div class = "option-4 options">
-            
-        </div>
-      
-      </div>
-      
-
-      <div class = "start-reset">
-        Start Game
-      </div>
-
-      <div class = "timer">
-        
+      <div class="timer">
         Time-remaining: <span class="time-remaining"> 60 </span> sec.
-
       </div>
 
-      <div class = "game-over">
-          
-          <p> Game Over! </p>
-          <p> Your Score is <span> 0 </span>. </p>
-
+      <div class="game-over">
+        <p>Game Over!</p>
+        <p>Your Score is <span> 0 </span>.</p>
       </div>
-
     </div>
 
-    <script src = "quiz.js"></script>
-
+    <script src="quiz.js"></script>
   </body>
-
 </html>
